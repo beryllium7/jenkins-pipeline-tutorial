@@ -37,6 +37,7 @@ git fetch
 git status
 git merge
 git checkout -b branch_name
+git -b bracnhname
 ```
 
 
