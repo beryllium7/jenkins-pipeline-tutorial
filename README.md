@@ -32,6 +32,32 @@ git config --global user.email "your_email_address@example.com"
 git pull
 git add .
 git commit - m "comment"
+
+git config --global user.name "your_username"
+git config --global user.email "your_email_address@example.com"
+
+git remote add origin url
+git push --set-upstream origin master
+##change to master branch in git hub repo and check if file is added
+## add a new file 
+git fetch
+git merge 
+## make another file 
+git pull
+git log
+##to create a new branch
+git -b anybranchname
+git checkout abovebranchname
+git remote -v
+git branch -vv
+git ls -files
+## to restore modified file, modify content of a file in local
+git status
+git restore filename
+git status
+
+git clone url
+cd
 git push
 git fetch 
 git status
@@ -39,6 +65,8 @@ git merge
 git checkout -b branch_name
 git -b bracnhname
 git log
+git gui
+git diff
 ```
 
 
@@ -92,6 +120,8 @@ enter git link for maven
 goals and options: clean compile test package
 
 output directory : C:\ProgramData\Jenkins\.jenkins\workspace\maventry\target
+copy jar
+open powershell dir path of jarfile
 ```
 ### ant
 ```
@@ -99,7 +129,9 @@ Source code management: GIT
 enter git link for ant
 build: invoke ant
 ant version :ant
+branches to build : */master
 targets: clean compile test package war
+out: get-deps: .jar
 ```
 
 # pipeline with stages and parameters
@@ -147,6 +179,9 @@ pipeline {
 container name/container id can be used
 image name/image id can be used
 
+
+docker version
+
 docker search ubuntu
 docker pull ubuntu
 docker images
@@ -187,7 +222,13 @@ make folder with dockerfile and index.html in it
 open a terminal in this folder
 
 docker build -t imagename . 
+docker images
+docker run -it -p 8888:80 imagename
+mkdir beryl
+cd beryl(go to path where html file is there)
 docker run --publish 8888:80 imagename
+docker ps
+docker history
 
 open browser and go to localhost:8888
 ```
@@ -197,7 +238,7 @@ open browser and go to localhost:8888
 ngrok http 8080
 webhook create
 webhook ngrok http link paste /github-webhook/
-webhook applicaton json
+webhook content type: applicaton/json
 build triggers : github hook trigger for gitscm polling
 pipeline: defn: pipeline script from scm
 scm git
